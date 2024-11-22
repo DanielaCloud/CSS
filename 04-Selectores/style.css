@@ -11,10 +11,29 @@ tipos de selectores
 
    2. Selector de clase
 
+   Seleccionan los elementos que tiene una clase especifica. 
+
+   se usa la "notacion" de punto (.) antes del nombre de la clase
+   
+   .nombreClase {
+   propiedad: valor
+   }
+
    3. Selectores de ID
+
+   Seleccionan un elemento único con identificador especifico. 
+   
+   Se usa el la "notación" de numeral (#) antes del nombre del id.
+
+   #nombreId {propiedad: valor;
+   }
 
    4. Selectores Combinados 
       -Descendientes
+
+      Seleccionan elementos dentro de otros elementos.
+
+      elemento elementoInterno {propiedad: valor;}
       -Hijo directo
       .Elemento adjacente
       -Hermano general 
@@ -38,7 +57,7 @@ tipos de selectores
 /* universal -> Seleccionar todos los elementos de un document */
 
 *{ 
-border: 2px solid red; 
+/* border: 2px solid red;  */
 /* Resset Básico */
 margin: 0;
 padding: 0;
@@ -62,4 +81,43 @@ p{
 
 header{
   background-color: mediumaquamarine;
+}
+
+/* Selectores de clase */
+
+.content {
+  background-color: plum;
+  padding: 48px;
+}
+
+.hero{
+  background-color: pink;
+  padding: 24px;
+}
+
+.hero-title {
+  background-color: hotpink;
+  padding: 16px;
+  color:indigo;
+  text-align: center;
+}
+
+/* Selector de Id */
+
+#about-title {
+  color: darkmagenta;
+  font-size: 72px;
+}
+
+/* Combinado - Elementos Decendientes */
+
+aside section {
+  background-color: crimson;
+  padding: 48px;
+}
+.aside-section h3 {
+  color: white;
+  text-align: right;
+  padding: 24px;
+  background-color:hotpink;
 }
