@@ -35,16 +35,60 @@ tipos de selectores
 
       elemento elementoInterno {propiedad: valor;}
       -Hijo directo
+
+      Selecciona elementos que son hijos de un elemento padre.
+
+      elemento > elementosHijos {
+        propiedades y el valor;
+        }
+
       .Elemento adjacente
+
+      Selecciona el primer elemento inmedianamente despues de otro, (su hermano inmediato o en ingles Siblings)
+
+      Elemento + elementoAdjacente {
+      propiedad: valor;
+      }
+
       -Hermano general 
+
+      Selecciona todos los elementos hermanos despues de un elemento.
+
+      elemento ~ elementoHermanos {
+      propieda: valor;
+      }
 
    5.Selectores de atributos 
      -Atributo
+
+     Selecciona elementos segun el atributo que indiquemos. Sin importar su valor que indiquemos
+
+     elemento[atributo] {
+     propiedad: valor;
+     }
+
      -Atributo Valor 
+
+     Selecciona elementos según el atributo y el valor que indquemos.
+
+     elemento[atributo=valor] {proiedad: valor;}
 
    6. Selector Avanzado 
      -Pseudo-Clases
+
+     Seleccionamos elementos en un estado en particular.
+       
+       elemento:pseudoclases{
+       propiedad: valor;
+       }
+
      -Pseudo-elementos
+
+     Seleccionan partes especificas de n elemento en html 
+       
+       elemento::pseudoelemento {
+        propiedad: valor;
+        }
 
 
 */
@@ -96,7 +140,7 @@ header{
 }
 
 .hero-title {
-  background-color: hotpink;
+  background-color:lightskyblue;
   padding: 16px;
   color:indigo;
   text-align: center;
@@ -112,12 +156,77 @@ header{
 /* Combinado - Elementos Decendientes */
 
 aside section {
-  background-color: crimson;
+  background-color:turquoise;
   padding: 48px;
 }
 .aside-section h3 {
   color: white;
   text-align: right;
   padding: 24px;
-  background-color:hotpink;
+  background-color:mediumpurple;
+}
+
+/* Combinados - Hijos Directos */
+
+ul > li {
+  background-color:powderblue;
+}
+
+.lista> li{
+  font-size: 8px;
+  color: midnightblue;
+}
+
+/* Combinamos - Elemento Adjacente */
+
+h3 + ul {
+  list-style:none;
+}
+
+.bro + li {
+  background-color:cornflowerblue;
+}
+
+/* Combinados - Hermanos Generale */
+
+.bro + li ~ li {
+  background-color:lightseagreen;
+}
+.tercero ~ li {
+  color: darkslategrey;
+  font-size: 40px;
+}
+
+/* Selectores de Atributo */
+a[href] {
+  display: block;
+  text-decoration: none;
+  color:navy;
+}
+
+/* Selectores de Atributo con Valor */
+a[href="https://www.instagram.com/"] {
+  font-size: 48px;
+  color:cornflowerblue;
+}
+
+/* Pseudo clases */
+a:hover {
+  background-color:rebeccapurple;
+  color: white;
+  text-decoration: underline;
+}
+
+a:focus {
+  border: 10px solid red;
+}
+
+/* Pseudo-elementos */
+
+a::after{
+  content: "🔮";
+}
+
+a::before{
+  content: "Este es un enlace hacia: ";
 }
