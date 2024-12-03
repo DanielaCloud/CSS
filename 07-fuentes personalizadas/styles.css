@@ -1,0 +1,115 @@
+/* 
+ Fuentes personalizadas
+
+ -fuentes Externas 
+
+  Llamamos desde servidores remotos
+
+
+  Google fonts
+    Es un servicio o catalogo de fuentes que podemos usar de mnera gratuita en internet.
+
+    -optimizadas para digital
+    -gratuitas de uso comercial
+    -cuaradas y de alta calidad
+    -código de vincluacion para web
+
+    https://fonts.google.com/
+
+    1. Seleccionar la fuente y traemos el codigo de incrustacion o embed code al html, lo pegamos dentro de las etiquetas <head>
+
+    2. Definimos las reglas CSS para los elementos a los que se las queremos aplicar 
+      
+      -usamos las propiedades de font-family font-weight, font-style para las tipografias estaticas
+
+    Fuentes internas
+
+    Llamamos desde nuestro propio servidor 
+
+    1.Debemos tener los archivos en una carepta especifica
+    2.Formatos communes son .ttf .otf .woff .woff2 etc...
+    3.Declaramos en CSS @font-face
+     
+     @font-face {
+      font-family: nombreFuente; // Dos palabras entre " "
+      src:url (ubiccion), format(formato);ubicacion y formato entre "" -NO OLVIDAR LA COMA DESPUES DEL URL
+      }
+
+      4.Creamos la regla CSS 
+
+      Selector {font-family: nombreFuentes, respaldo;
+      }
+        
+
+*/
+
+/* tipografias estaticas */
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Elige el grosor o peso de la tipografía */
+  font-style: normal; /* Elige si es italica o cursiva */
+}
+
+p{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* tipografias variables */
+ 
+.title{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+  transition: font-weight 1s ease;
+}
+.title:hover{
+font-weight: 182;
+transition: font-weight 1s ease;
+}
+
+}
+.text{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Elegir dos fuentes distintas en google fonts */
+Una para el titulo
+Una para el párrafo
+Crear la regla CSS para cada elemento con un selector
+de id.
+
+Nota: comentar los codigos de incrustcion anteriores
+
+#title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#text {
+  
+}
+
+@font-face {
+  font-family: "sawer";
+  src: url(./fonts/Sawer.otf); format("otf");
+}
+
+@font-face{
+  font-family: "Tropi Land";
+  src: url(./fonts/Tropi\ Land\ -\ \(Demo\)\ hanscostudio.com.ttf), format("ttf")
+}
+
+#title {
+  font-family: "Sawer", sans-serif;
+}
+
+#text{
+  font-family: "Tropi Land", sans-serif;
+}
