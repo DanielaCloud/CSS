@@ -1,0 +1,58 @@
+/* 
+
+Centrar con margin
+
+Podemos centrar horizontalmente un elemento de bloque utilizando la propiedad de margin con los valores "auto" 
+
+Para centrar un elemento establecemos 
+  
+  margin-left: auto;
+  margin-right: auto;
+
+  -Los elementos deben tener un ancho definido para que esto funcione.
+  -Los elementos de línea no pueden centrare con margin auto.
+  -Los elementos de línea se pueden centrar si están en un contenedor con la propiedad texr-aling: center.
+  -Para centrar un elemento de linea, primero lo transdormamos en bloque con display:block y luego le definimos un ancho width: fit-content
+  -Se puede centrar elementos de linea si se encuentran en un contenedor con display: flex - grid; 
+  -No se puede usar margin auto para centrar en la vertical, a menos que su contenedor tenga display: flex - grid; 
+
+  Se puede usar el shorthand para centrar, pero no es muy recomendable
+
+    margin: 0 auto;
+
+*/
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  color: cornflowerblue;
+  background-color: darkslateblue;
+  text-align: center;
+  /* text-aling:center; */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  /* margin-left: auto;
+  margin-right: auto;  */
+  margin: 0 auto;
+  background-color: gainsboro;
+}
+
+.h1 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  color:darksalmon;
+  background-color: darkblue;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Commit: "centrar con margin auto" */
